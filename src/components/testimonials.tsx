@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "motion/react";
 
 const testimonials = [
@@ -21,49 +22,47 @@ export default function Testimonials() {
   return (
     <section id="testimonials" className="bg-[#1B5C6E] relative overflow-hidden">
 
-      {/* Large background leaf */}
-      <div className="absolute inset-0 pointer-events-none flex items-center justify-center">
-        <svg className="w-[700px] h-[700px] opacity-[0.04] text-white" viewBox="0 0 400 400" fill="currentColor">
-          <path d="M200 20 Q340 80 350 260 Q240 340 120 290 Q30 220 200 20Z" />
-          <path d="M200 20 L205 340" stroke="white" strokeWidth="2" fill="none" />
-          <path d="M202 110 Q280 150 295 230" stroke="white" strokeWidth="1.5" fill="none" />
-          <path d="M203 170 Q130 210 115 290" stroke="white" strokeWidth="1.5" fill="none" />
-        </svg>
+      {/* Eucalyptus — top right, tinted white */}
+      <div className="absolute top-0 right-0 w-[200px] sm:w-[280px] lg:w-[380px] pointer-events-none select-none opacity-15">
+        <Image src="/eucalyptus.png" alt="" width={380} height={253} className="w-full h-auto brightness-0 invert" style={{ transform: "scaleX(-1)" }} />
       </div>
 
-      <div className="max-w-7xl mx-auto px-8 md:px-12 py-24 md:py-32 relative z-10">
+      {/* Eucalyptus — bottom left */}
+      <div className="absolute bottom-0 left-0 w-[160px] sm:w-[220px] lg:w-[300px] pointer-events-none select-none opacity-10">
+        <Image src="/eucalyptus.png" alt="" width={300} height={200} className="w-full h-auto brightness-0 invert" style={{ transform: "scaleY(-1)" }} />
+      </div>
 
-        {/* Header */}
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 md:px-12 py-20 md:py-32 relative z-10">
+
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-80px" }}
+          viewport={{ once: true, margin: "-60px" }}
           transition={{ duration: 0.65 }}
-          className="mb-16"
+          className="mb-12 md:mb-16"
         >
           <div className="flex items-center gap-3 mb-5">
             <div className="w-8 h-px bg-white/40" />
             <p className="text-[10px] uppercase tracking-[0.3em] text-white/50">Kind Words</p>
           </div>
-          <h2 className="font-display font-light text-4xl md:text-5xl text-white leading-[1.1]">
+          <h2 className="font-display font-light text-3xl sm:text-4xl md:text-5xl text-white leading-[1.1]">
             From those who{" "}
             <em className="italic opacity-60">practise here.</em>
           </h2>
         </motion.div>
 
-        {/* Testimonials — horizontal layout */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-0 border border-white/10 divide-y md:divide-y-0 md:divide-x divide-white/10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-0 md:border md:border-white/10 md:divide-x md:divide-white/10">
           {testimonials.map((t, i) => (
             <motion.div
               key={i}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-60px" }}
+              viewport={{ once: true, margin: "-40px" }}
               transition={{ duration: 0.55, delay: i * 0.12 }}
-              className="p-10"
+              className="p-7 sm:p-8 md:p-10 border border-white/10 md:border-0"
             >
-              <span className="font-display text-4xl text-white/15 leading-none block mb-6 select-none">&ldquo;</span>
-              <p className="font-display font-light text-lg text-white/80 leading-[1.7] italic mb-8">
+              <span className="font-display text-3xl sm:text-4xl text-white/15 leading-none block mb-5 select-none">&ldquo;</span>
+              <p className="font-display font-light text-base sm:text-lg text-white/80 leading-[1.7] italic mb-7 sm:mb-8">
                 {t.quote}
               </p>
               <p className="text-[10px] uppercase tracking-widest text-white/35">{t.name}</p>

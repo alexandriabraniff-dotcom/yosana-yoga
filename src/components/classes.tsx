@@ -28,57 +28,57 @@ export default function Classes() {
   return (
     <section id="classes" className="bg-white relative overflow-hidden">
 
-      {/* Section header */}
-      <div className="max-w-7xl mx-auto px-8 md:px-12 pt-24 pb-16">
-        <div className="flex items-end justify-between">
+      {/* Eucalyptus — right side mid */}
+      <div className="absolute top-1/2 right-0 -translate-y-1/2 w-[160px] sm:w-[220px] pointer-events-none select-none opacity-40">
+        <Image src="/eucalyptus.png" alt="" width={220} height={147} className="w-full h-auto" style={{ transform: "scaleX(-1) rotate(90deg)" }} />
+      </div>
+
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 md:px-12 pt-20 md:pt-28 pb-6">
+        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-12 md:mb-16">
           <div>
             <div className="flex items-center gap-3 mb-5">
               <div className="w-8 h-px bg-[#1B5C6E]" />
               <p className="text-[10px] uppercase tracking-[0.3em] text-[#1B5C6E]">The Practice</p>
             </div>
-            <h2 className="font-display font-light text-4xl md:text-5xl text-[#1A2B2B] leading-[1.1]">
+            <h2 className="font-display font-light text-3xl sm:text-4xl md:text-5xl text-[#1A2B2B] leading-[1.1]">
               Ashtanga Vinyasa,{" "}
               <em className="italic text-[#1B5C6E]">your way.</em>
             </h2>
           </div>
-          <p className="hidden md:block text-sm text-[#6B7A7A] font-light max-w-xs text-right leading-relaxed">
-            Held in a home studio in Parkside. Exact address shared on booking.
+          <p className="text-sm text-[#6B7A7A] font-light max-w-xs sm:text-right leading-relaxed shrink-0">
+            Held in a home studio in Parkside.<br className="hidden sm:block" /> Address shared on booking.
           </p>
         </div>
       </div>
 
-      {/* Cards */}
-      <div className="max-w-7xl mx-auto px-8 md:px-12 pb-24 grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 md:px-12 pb-20 md:pb-28 grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-6">
         {classes.map((c, i) => (
           <motion.div
             key={c.name}
-            initial={{ opacity: 0, y: 28 }}
+            initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-60px" }}
-            transition={{ duration: 0.65, ease: "easeOut", delay: i * 0.12 }}
+            viewport={{ once: true, margin: "-40px" }}
+            transition={{ duration: 0.6, ease: "easeOut", delay: i * 0.1 }}
             className="group border border-[#E0DDD8] overflow-hidden hover:border-[#1B5C6E]/30 transition-colors duration-300"
           >
-            {/* Image */}
-            <div className="relative h-64 overflow-hidden">
+            <div className="relative h-52 sm:h-64 overflow-hidden">
               <Image
                 src={c.image}
                 alt={c.name}
                 fill
                 sizes="(max-width: 768px) 100vw, 50vw"
-                className="object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+                className="object-cover transition-transform duration-700 group-hover:scale-[1.04]"
               />
-              {/* Number overlay */}
               <div className="absolute top-5 left-5">
-                <span className="font-display text-5xl font-light text-white/30">{c.number}</span>
+                <span className="font-display text-4xl sm:text-5xl font-light text-white/30">{c.number}</span>
               </div>
             </div>
 
-            {/* Text */}
-            <div className="p-8">
+            <div className="p-6 sm:p-8">
               <p className="text-[10px] uppercase tracking-widest text-[#1B5C6E] mb-2">{c.subtitle}</p>
-              <h3 className="font-display font-light text-2xl text-[#1A2B2B] mb-4">{c.name}</h3>
+              <h3 className="font-display font-light text-xl sm:text-2xl text-[#1A2B2B] mb-3 sm:mb-4">{c.name}</h3>
               <p className="text-sm text-[#6B7A7A] leading-relaxed font-light">{c.description}</p>
-              <p className="mt-6 text-xs text-[#C4A882] italic font-light">{c.note}</p>
+              <p className="mt-5 sm:mt-6 text-xs text-[#C4A882] italic font-light">{c.note}</p>
             </div>
           </motion.div>
         ))}

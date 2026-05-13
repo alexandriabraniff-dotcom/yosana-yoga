@@ -8,43 +8,53 @@ export default function Contact() {
   return (
     <section id="contact" className="bg-white relative overflow-hidden">
 
-      <div className="max-w-7xl mx-auto px-8 md:px-12 py-24 md:py-32">
+      {/* Eucalyptus — bottom left */}
+      <div className="absolute bottom-0 left-0 w-[200px] sm:w-[280px] lg:w-[360px] pointer-events-none select-none opacity-50">
+        <Image src="/eucalyptus.png" alt="" width={360} height={240} className="w-full h-auto" style={{ transform: "scaleY(-1)" }} />
+      </div>
+
+      {/* Eucalyptus — top right */}
+      <div className="absolute top-0 right-0 w-[160px] sm:w-[220px] lg:w-[280px] pointer-events-none select-none opacity-40">
+        <Image src="/eucalyptus.png" alt="" width={280} height={187} className="w-full h-auto" style={{ transform: "scale(-1)" }} />
+      </div>
+
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 md:px-12 py-20 md:py-32 relative z-10">
 
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-80px" }}
+          viewport={{ once: true, margin: "-60px" }}
           transition={{ duration: 0.65 }}
-          className="mb-16"
+          className="mb-12 md:mb-16"
         >
           <div className="flex items-center gap-3 mb-5">
             <div className="w-8 h-px bg-[#1B5C6E]" />
             <p className="text-[10px] uppercase tracking-[0.3em] text-[#1B5C6E]">Get in Touch</p>
           </div>
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
-            <h2 className="font-display font-light text-4xl md:text-5xl text-[#1A2B2B] leading-[1.1]">
+          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+            <h2 className="font-display font-light text-3xl sm:text-4xl md:text-5xl text-[#1A2B2B] leading-[1.1]">
               Ready to begin?{" "}
               <em className="italic text-[#1B5C6E]">Say hello.</em>
             </h2>
-            <p className="text-sm text-[#6B7A7A] font-light max-w-xs md:text-right leading-relaxed">
+            <p className="text-sm text-[#6B7A7A] font-light max-w-xs sm:text-right leading-relaxed shrink-0">
               Warunee personally replies to every message — no chatbots, just a real conversation.
             </p>
           </div>
         </motion.div>
 
-        {/* Two-column layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-6">
+        {/* Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-5 md:gap-6">
 
-          {/* LEFT — studio image + info (3 cols) */}
+          {/* LEFT — image + info */}
           <motion.div
-            initial={{ opacity: 0, x: -20 }}
+            initial={{ opacity: 0, x: -16 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-80px" }}
+            viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.7 }}
             className="lg:col-span-3 flex flex-col gap-4"
           >
-            <div className="relative h-72 overflow-hidden">
+            <div className="relative h-56 sm:h-72 overflow-hidden">
               <Image
                 src="https://images.unsplash.com/photo-1600618528240-fb9fc964b853?w=900&q=80&auto=format&fit=crop"
                 alt="A warm light-filled yoga space"
@@ -56,7 +66,7 @@ export default function Contact() {
             </div>
 
             <div className="grid grid-cols-2 gap-4">
-              <div className="border border-[#E0DDD8] p-6">
+              <div className="border border-[#E0DDD8] p-5 sm:p-6">
                 <div className="flex items-center gap-2 mb-3">
                   <MapPin size={12} className="text-[#1B5C6E]" />
                   <p className="text-[10px] uppercase tracking-widest text-[#6B7A7A]">Location</p>
@@ -64,7 +74,7 @@ export default function Contact() {
                 <p className="text-sm text-[#1A2B2B] font-light">Parkside, Adelaide SA</p>
                 <p className="text-xs text-[#A0A8A8] mt-1 font-light">Address shared on booking</p>
               </div>
-              <div className="border border-[#E0DDD8] p-6">
+              <div className="border border-[#E0DDD8] p-5 sm:p-6">
                 <div className="flex items-center gap-2 mb-3">
                   <Mail size={12} className="text-[#1B5C6E]" />
                   <p className="text-[10px] uppercase tracking-widest text-[#6B7A7A]">Social</p>
@@ -77,25 +87,22 @@ export default function Contact() {
             </div>
           </motion.div>
 
-          {/* RIGHT — CTA panel (2 cols) */}
+          {/* RIGHT — CTA panel */}
           <motion.div
-            initial={{ opacity: 0, x: 20 }}
+            initial={{ opacity: 0, x: 16 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-80px" }}
+            viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.7, delay: 0.1 }}
-            className="lg:col-span-2 bg-[#1B5C6E] p-10 flex flex-col justify-between relative overflow-hidden"
+            className="lg:col-span-2 bg-[#1B5C6E] p-8 sm:p-10 flex flex-col justify-between relative overflow-hidden"
           >
-            {/* Leaf inside panel */}
-            <div className="absolute top-0 right-0 pointer-events-none">
-              <svg className="w-48 h-48 opacity-[0.08] text-white translate-x-10 -translate-y-10" viewBox="0 0 200 200" fill="currentColor">
-                <path d="M100 10 Q170 40 175 140 Q110 175 40 140 Q10 80 100 10Z" />
-                <path d="M100 10 L103 168" stroke="white" strokeWidth="1.5" fill="none" />
-              </svg>
+            {/* Eucalyptus inside panel */}
+            <div className="absolute top-0 right-0 w-36 pointer-events-none select-none opacity-20">
+              <Image src="/eucalyptus.png" alt="" width={140} height={93} className="w-full h-auto brightness-0 invert" style={{ transform: "scaleX(-1)" }} />
             </div>
 
             <div className="relative z-10">
               <p className="text-[10px] uppercase tracking-[0.3em] text-white/40 mb-4">New Students</p>
-              <h3 className="font-display font-light text-3xl text-white leading-tight mb-5">
+              <h3 className="font-display font-light text-2xl sm:text-3xl text-white leading-tight mb-5">
                 Come for your{" "}
                 <em className="italic opacity-75">first class.</em>
               </h3>
@@ -104,21 +111,13 @@ export default function Contact() {
               </p>
             </div>
 
-            <div className="relative z-10 space-y-3 mt-10">
-              <a
-                href="https://www.instagram.com/yosana.adl"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-center w-full bg-white text-[#1B5C6E] py-4 text-[10px] uppercase tracking-[0.2em] hover:bg-[#F4F2EE] transition-colors"
-              >
+            <div className="relative z-10 space-y-3 mt-8 sm:mt-10">
+              <a href="https://www.instagram.com/yosana.adl" target="_blank" rel="noopener noreferrer"
+                className="flex items-center justify-center w-full bg-white text-[#1B5C6E] py-4 text-[10px] uppercase tracking-[0.2em] hover:bg-[#F4F2EE] transition-colors">
                 Message on Instagram
               </a>
-              <a
-                href="https://www.facebook.com/yosanaco/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-center w-full border border-white/25 text-white py-4 text-[10px] uppercase tracking-[0.2em] hover:border-white/60 transition-colors"
-              >
+              <a href="https://www.facebook.com/yosanaco/" target="_blank" rel="noopener noreferrer"
+                className="flex items-center justify-center w-full border border-white/25 text-white py-4 text-[10px] uppercase tracking-[0.2em] hover:border-white/60 transition-colors">
                 Message on Facebook
               </a>
               <p className="text-[10px] text-white/30 text-center pt-2 font-light">

@@ -5,30 +5,45 @@ import { motion } from "motion/react";
 
 export default function Hero() {
   return (
-    <section className="h-screen bg-white flex flex-col overflow-hidden">
+    <section className="h-screen bg-white flex flex-col overflow-hidden relative">
 
-      {/* Main grid — fills the viewport below the nav (nav is ~66px) */}
+      {/* Eucalyptus — top right corner */}
+      <div className="absolute top-0 right-0 w-[280px] sm:w-[360px] lg:w-[480px] pointer-events-none z-10 select-none">
+        <Image
+          src="/eucalyptus.png"
+          alt=""
+          width={480}
+          height={320}
+          className="w-full h-auto object-contain"
+          style={{ transform: "scaleX(-1)" }}
+          priority
+        />
+      </div>
+
+      {/* Eucalyptus — bottom left corner */}
+      <div className="absolute bottom-0 left-0 w-[200px] sm:w-[260px] lg:w-[340px] pointer-events-none z-10 select-none">
+        <Image
+          src="/eucalyptus.png"
+          alt=""
+          width={340}
+          height={230}
+          className="w-full h-auto object-contain"
+          style={{ transform: "scaleY(-1)" }}
+        />
+      </div>
+
+      {/* Main grid */}
       <div className="flex-1 grid grid-cols-1 lg:grid-cols-2 min-h-0">
 
-        {/* LEFT — text column */}
-        <div className="flex flex-col justify-center px-10 md:px-16 lg:px-20 py-12 relative">
+        {/* LEFT — text */}
+        <div className="flex flex-col justify-center px-6 sm:px-10 md:px-14 lg:px-20 py-12 relative z-20">
 
-          {/* Subtle leaf — top left corner */}
-          <div className="absolute top-0 left-0 pointer-events-none">
-            <svg className="w-56 h-56 opacity-[0.06] text-[#1B5C6E] -translate-x-10 -translate-y-10" viewBox="0 0 200 200" fill="currentColor">
-              <path d="M100 10 Q170 40 175 140 Q110 175 40 140 Q10 80 100 10Z" />
-              <path d="M100 10 L103 168" stroke="currentColor" strokeWidth="1.5" fill="none" />
-              <path d="M101 60 Q145 85 155 130" stroke="currentColor" strokeWidth="1" fill="none" />
-              <path d="M102 100 Q62 122 50 162" stroke="currentColor" strokeWidth="1" fill="none" />
-            </svg>
-          </div>
-
-          {/* Location pill */}
+          {/* Location tag */}
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="inline-flex items-center gap-2 mb-10 w-fit"
+            className="inline-flex items-center gap-2 mb-8"
           >
             <span className="w-4 h-px bg-[#1B5C6E]" />
             <span className="text-[10px] uppercase tracking-[0.28em] text-[#1B5C6E]">Parkside · Adelaide</span>
@@ -39,8 +54,8 @@ export default function Hero() {
             initial={{ opacity: 0, y: 22 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, delay: 0.2 }}
-            className="font-display font-light leading-[1.08] tracking-tight text-[#1A2B2B] mb-7"
-            style={{ fontSize: "clamp(2.8rem, 5vw, 4.5rem)" }}
+            className="font-display font-light leading-[1.08] tracking-tight text-[#1A2B2B] mb-6"
+            style={{ fontSize: "clamp(2.6rem, 6vw, 4.5rem)" }}
           >
             A home for
             <br />
@@ -52,7 +67,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.35 }}
-            className="space-y-1.5 mb-12"
+            className="space-y-1 mb-10"
           >
             <p className="text-sm text-[#6B7A7A] font-light leading-relaxed">
               Intimate Ashtanga Vinyasa yoga with Warunee (Pack).
@@ -71,21 +86,20 @@ export default function Hero() {
           >
             <a
               href="#contact"
-              className="bg-[#1A2B2B] text-white px-8 py-3.5 text-xs uppercase tracking-[0.15em] hover:bg-[#1B5C6E] transition-colors duration-300"
+              className="bg-[#1A2B2B] text-white px-6 sm:px-8 py-3.5 text-xs uppercase tracking-[0.15em] hover:bg-[#1B5C6E] transition-colors duration-300"
             >
               Book a Class
             </a>
             <a
               href="#about"
-              className="border border-[#C4C0BA] text-[#1A2B2B] px-8 py-3.5 text-xs uppercase tracking-[0.15em] hover:border-[#1B5C6E] hover:text-[#1B5C6E] transition-colors duration-300"
+              className="border border-[#C4C0BA] text-[#1A2B2B] px-6 sm:px-8 py-3.5 text-xs uppercase tracking-[0.15em] hover:border-[#1B5C6E] hover:text-[#1B5C6E] transition-colors duration-300"
             >
               Learn More
             </a>
           </motion.div>
-
         </div>
 
-        {/* RIGHT — full-height image */}
+        {/* RIGHT — photo (desktop only) */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -100,16 +114,7 @@ export default function Hero() {
             sizes="50vw"
             className="object-cover object-center"
           />
-          {/* Thin left border edge */}
           <div className="absolute inset-y-0 left-0 w-px bg-[#E0DDD8]" />
-
-          {/* Corner leaf — bottom right of image */}
-          <div className="absolute bottom-0 right-0 pointer-events-none">
-            <svg className="w-40 h-40 opacity-20 text-white translate-x-6 translate-y-6" viewBox="0 0 200 200" fill="currentColor">
-              <path d="M100 10 Q170 40 175 140 Q110 175 40 140 Q10 80 100 10Z" />
-              <path d="M100 10 L103 168" stroke="white" strokeWidth="1.5" fill="none" />
-            </svg>
-          </div>
         </motion.div>
 
       </div>
