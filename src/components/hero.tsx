@@ -82,8 +82,8 @@ export default function Hero() {
           className="relative hidden lg:block"
         >
           <Image
-            src="https://images.unsplash.com/photo-1545389336-cf090694435e?w=1200&q=85&auto=format&fit=crop"
-            alt="Yoga practice in a calm, light-filled home studio"
+            src="/image_3.png"
+            alt="Yosana Yoga Home studio in Parkside, Adelaide"
             fill
             priority
             sizes="50vw"

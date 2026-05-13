@@ -102,8 +102,8 @@ export default function Contact() {
             className="relative h-[340px] sm:h-[420px] lg:h-full min-h-[340px] overflow-hidden"
           >
             <Image
-              src="https://images.unsplash.com/photo-1593811167562-9cef47bfc4d7?w=900&q=85&auto=format&fit=crop"
-              alt="Yosana Yoga Home — warm, light-filled studio in Parkside"
+              src="/image_2.png"
+              alt="Yoga practice at Yosana Yoga Home, Parkside Adelaide"
               fill
               sizes="(max-width: 1024px) 100vw, 50vw"
               className="object-cover object-center"

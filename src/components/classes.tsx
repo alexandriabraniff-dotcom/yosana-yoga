@@ -10,7 +10,7 @@ const classes = [
     number: "01",
     name: "Private Session",
     tag: "One-on-one with Warunee",
-    image: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800&q=80&auto=format&fit=crop",
+    image: "/image_1.png",
     details: {
       description:
         "A session built entirely around you: your body, your goals, your pace. Warunee guides you through Ashtanga Vinyasa sequences with hands-on adjustments and careful, personalised attention.",
@@ -21,7 +21,7 @@ const classes = [
     number: "02",
     name: "Small Group Class",
     tag: "Intimate and attentive",
-    image: "https://images.unsplash.com/photo-1599901860904-17e6ed7083a0?w=800&q=80&auto=format&fit=crop",
+    image: "/image_4.png",
     details: {
       description:
         "Kept deliberately small so every student receives real attention. Flowing Ashtanga sequences, breathwork, and a warm unhurried pace in a beautiful home studio. Beginners especially welcome.",
