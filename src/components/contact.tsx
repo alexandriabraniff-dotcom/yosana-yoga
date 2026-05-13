@@ -107,7 +107,7 @@ export default function Contact() {
               fill
               sizes="(max-width: 1024px) 100vw, 50vw"
               className="object-cover object-center"
-              style={{ objectPosition: "center -40px" }}
+              style={{ objectPosition: "center -90px" }}
             />
             {/* Subtle green tint */}
             <div className="absolute inset-0 bg-[#2A5240]/10" />

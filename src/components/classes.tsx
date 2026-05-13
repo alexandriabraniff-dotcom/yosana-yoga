@@ -11,6 +11,7 @@ const classes = [
     name: "Private Session",
     tag: "One-on-one with Warunee",
     image: "/489972824_18307666117237707_9088277353174030011_n.jpg",
+    imageOffset: "center -20px",
     details: {
       description:
         "A session built entirely around you: your body, your goals, your pace. Warunee guides you through Ashtanga Vinyasa sequences with hands-on adjustments and careful, personalised attention.",
@@ -22,6 +23,7 @@ const classes = [
     name: "Small Group Class",
     tag: "Intimate and attentive",
     image: "/2025-05-13.webp",
+    imageOffset: "center center",
     details: {
       description:
         "Kept deliberately small so every student receives real attention. Flowing Ashtanga sequences, breathwork, and a warm unhurried pace in a beautiful home studio. Beginners especially welcome.",
@@ -75,6 +77,7 @@ export default function Classes() {
                     fill
                     sizes="(max-width: 640px) 100vw, 50vw"
                     className="object-cover transition-transform duration-700 group-hover:scale-[1.04]"
+                    style={{ objectPosition: c.imageOffset }}
                   />
                   <div className="absolute inset-0 bg-[#1A2B2B]/20 group-hover:bg-[#1A2B2B]/10 transition-colors duration-300" />
                   <span className="absolute top-3 left-4 font-display text-2xl font-light text-white/30 leading-none">
@@ -128,6 +131,7 @@ export default function Classes() {
                   fill
                   sizes="480px"
                   className="object-cover"
+                  style={{ objectPosition: active.imageOffset }}
                 />
                 <div className="absolute inset-0 bg-[#1A2B2B]/20" />
                 <button
