@@ -5,7 +5,7 @@ import { motion } from "motion/react";
 
 export default function Hero() {
   return (
-    <section className="min-h-screen bg-white flex items-center px-6 md:px-12 lg:px-20 pt-32 pb-16">
+    <section className="min-h-screen bg-white flex items-center px-6 md:px-12 lg:px-20 pt-24 pb-16">
       <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 
         {/* LEFT — text + buttons */}
