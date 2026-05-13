@@ -49,13 +49,13 @@ export default function About() {
 
             <div className="space-y-5 text-sm text-[#6B7A7A] font-light leading-[1.9]">
               <p>
-                Yosana Yoga Home was created by <strong className="text-[#1A2B2B] font-normal">Warunee</strong> — known warmly to her students as Pack — an Ashtanga Vinyasa specialist based in Parkside, Adelaide. What began as a deeply personal practice grew into a quiet, intentional space where others could experience yoga the way it was always meant to feel: unhurried, attentive, and genuinely caring.
+                Yosana Yoga Home was created by <strong className="text-[#1A2B2B] font-normal">Warunee</strong>, known warmly to her students as Pack. An Ashtanga Vinyasa specialist based in Parkside, Adelaide, what began as a deeply personal practice grew into a quiet, intentional space where others could experience yoga the way it was always meant to feel: unhurried, attentive, and genuinely caring.
               </p>
               <p>
-                Warunee brings a rare quality to her teaching. She watches carefully — reading each body with patience and precision, adjusting postures with a gentle hand, and meeting every student exactly where they are. Whether you have practised for years or are stepping onto a mat for the very first time, she has a gift for making you feel seen.
+                Warunee brings a rare quality to her teaching. She watches carefully, reading each body with patience and precision, adjusting postures with a gentle hand and meeting every student exactly where they are. Whether you have practised for years or are stepping onto a mat for the very first time, she has a gift for making you feel seen.
               </p>
               <p>
-                Her studio is not a commercial space. It is her home — warm, light-filled, and quietly beautiful. The size of every class is kept deliberately small, because Warunee believes that real yoga cannot happen in a crowd. It happens in the space between breath and stillness, when a teacher is truly present with you.
+                Her studio is not a commercial space. It is her home: warm, light-filled, and quietly beautiful. The size of every class is kept deliberately small, because Warunee believes that real yoga cannot happen in a crowd. It happens in the space between breath and stillness, when a teacher is truly present with you.
               </p>
               <p>
                 This is that space.

@@ -9,7 +9,7 @@ const classes = [
     name: "Private Session",
     subtitle: "One-on-one with Warunee",
     description:
-      "A session built entirely around you — your body, your goals, your pace. Warunee guides you through Ashtanga Vinyasa sequences with hands-on adjustments and careful, personalised attention. Available mornings and evenings.",
+      "A session built entirely around you: your body, your goals, your pace. Warunee guides you through Ashtanga Vinyasa sequences with hands-on adjustments and careful, personalised attention. Available mornings and evenings.",
     tags: ["Personalised sequencing", "Hands-on adjustments", "60 or 90 minutes", "All levels"],
     image: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=1000&q=85&auto=format&fit=crop",
     flip: false,

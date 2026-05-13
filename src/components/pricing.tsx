@@ -25,7 +25,7 @@ const plans = [
     name: "First Class",
     price: "New students",
     duration: "Come as you are",
-    description: "Never tried yoga? Come and see — no pressure, no expectations, beginners especially welcome.",
+    description: "Never tried yoga? Come and see. No pressure, no expectations, beginners especially welcome.",
     features: ["No experience needed", "Personal attention", "Relaxed & welcoming", "Mat & props provided"],
   },
 ];
@@ -52,7 +52,7 @@ export default function Pricing() {
               <em className="italic">Simple</em> and personal.
             </h2>
             <p className="text-sm text-[#6B7A7A] font-light max-w-xs sm:text-right leading-relaxed shrink-0">
-              Reach out directly — Warunee will find the right fit for you.
+              Reach out directly. Warunee will find the right fit for you.
             </p>
           </div>
         </motion.div>

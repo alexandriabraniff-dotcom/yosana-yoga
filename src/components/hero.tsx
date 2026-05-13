@@ -48,7 +48,7 @@ export default function Hero() {
               Intimate Ashtanga Vinyasa yoga with Warunee (Pack).
             </p>
             <p className="text-sm text-[#6B7A7A] font-light leading-relaxed">
-              Private sessions &amp; small group classes — all levels welcome.
+              Private sessions &amp; small group classes. All levels welcome.
             </p>
           </motion.div>
 

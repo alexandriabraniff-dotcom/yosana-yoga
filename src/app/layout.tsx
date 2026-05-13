@@ -14,7 +14,7 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Yosana Yoga Home | Ashtanga Vinyasa — Parkside, Adelaide",
+  title: "Yosana Yoga Home | Ashtanga Vinyasa, Parkside Adelaide",
   description:
     "Yosana Yoga Home is an intimate home yoga studio at 60 Blyth St, Parkside SA. Private 1:1 and small group Ashtanga Vinyasa classes with Warunee. All levels welcome.",
   openGraph: {
