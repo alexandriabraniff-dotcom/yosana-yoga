@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { motion } from "motion/react";
 
 const testimonials = [
@@ -21,16 +20,6 @@ const testimonials = [
 export default function Testimonials() {
   return (
     <section id="testimonials" className="bg-[#1B5C6E] relative overflow-hidden">
-
-      {/* Eucalyptus — top right, tinted white */}
-      <div className="absolute top-0 right-0 w-[200px] sm:w-[280px] lg:w-[380px] pointer-events-none select-none opacity-15">
-        <Image src="/eucalyptus.png" alt="" width={380} height={253} className="w-full h-auto brightness-0 invert" style={{ transform: "scaleX(-1)" }} />
-      </div>
-
-      {/* Eucalyptus — bottom left */}
-      <div className="absolute bottom-0 left-0 w-[160px] sm:w-[220px] lg:w-[300px] pointer-events-none select-none opacity-10">
-        <Image src="/eucalyptus.png" alt="" width={300} height={200} className="w-full h-auto brightness-0 invert" style={{ transform: "scaleY(-1)" }} />
-      </div>
 
       <div className="max-w-7xl mx-auto px-6 sm:px-8 md:px-12 py-20 md:py-32 relative z-10">
 

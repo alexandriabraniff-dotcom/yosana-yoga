@@ -7,31 +7,6 @@ export default function Hero() {
   return (
     <section className="h-screen bg-white flex flex-col overflow-hidden relative">
 
-      {/* Eucalyptus — top right corner */}
-      <div className="absolute top-0 right-0 w-[280px] sm:w-[360px] lg:w-[480px] pointer-events-none z-10 select-none">
-        <Image
-          src="/eucalyptus.png"
-          alt=""
-          width={480}
-          height={320}
-          className="w-full h-auto object-contain"
-          style={{ transform: "scaleX(-1)" }}
-          priority
-        />
-      </div>
-
-      {/* Eucalyptus — bottom left corner */}
-      <div className="absolute bottom-0 left-0 w-[200px] sm:w-[260px] lg:w-[340px] pointer-events-none z-10 select-none">
-        <Image
-          src="/eucalyptus.png"
-          alt=""
-          width={340}
-          height={230}
-          className="w-full h-auto object-contain"
-          style={{ transform: "scaleY(-1)" }}
-        />
-      </div>
-
       {/* Main grid */}
       <div className="flex-1 grid grid-cols-1 lg:grid-cols-2 min-h-0">
 

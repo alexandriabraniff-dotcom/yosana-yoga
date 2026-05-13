@@ -28,11 +28,6 @@ export default function Classes() {
   return (
     <section id="classes" className="bg-white relative overflow-hidden">
 
-      {/* Eucalyptus — right side mid */}
-      <div className="absolute top-1/2 right-0 -translate-y-1/2 w-[160px] sm:w-[220px] pointer-events-none select-none opacity-40">
-        <Image src="/eucalyptus.png" alt="" width={220} height={147} className="w-full h-auto" style={{ transform: "scaleX(-1) rotate(90deg)" }} />
-      </div>
-
       <div className="max-w-7xl mx-auto px-6 sm:px-8 md:px-12 pt-20 md:pt-28 pb-6">
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-12 md:mb-16">
           <div>

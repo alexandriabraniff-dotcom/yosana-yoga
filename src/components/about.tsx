@@ -5,14 +5,8 @@ import { motion } from "motion/react";
 
 export default function About() {
   return (
-    <section id="about" className="bg-[#F7F5F1] relative overflow-hidden">
-
-      {/* Eucalyptus — top right */}
-      <div className="absolute top-0 right-0 w-[220px] sm:w-[300px] lg:w-[380px] pointer-events-none select-none opacity-60">
-        <Image src="/eucalyptus.png" alt="" width={380} height={253} className="w-full h-auto" style={{ transform: "scaleX(-1)" }} />
-      </div>
-
-      <div className="max-w-7xl mx-auto px-6 sm:px-8 md:px-12 py-20 md:py-32 relative z-10">
+    <section id="about" className="bg-[#F7F5F1]">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 md:px-12 py-20 md:py-32">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center">
 
           {/* Image */}
@@ -44,7 +38,7 @@ export default function About() {
           >
             <div className="flex items-center gap-3 mb-6">
               <div className="w-8 h-px bg-[#1B5C6E]" />
-              <p className="text-[10px] uppercase tracking-[0.3em] text-[#1B5C6E]">Our Story</p>
+              <p className="text-[10px] uppercase tracking-[0.3em] text-[#1B5C6E]">Meet Warunee</p>
             </div>
 
             <h2 className="font-display font-light text-3xl sm:text-4xl md:text-5xl text-[#1A2B2B] leading-[1.15] mb-7">
@@ -53,37 +47,22 @@ export default function About() {
               <em className="italic text-[#1B5C6E]">Yosana Yoga Home.</em>
             </h2>
 
-            <div className="space-y-4 text-sm text-[#6B7A7A] font-light leading-[1.9]">
+            <div className="space-y-5 text-sm text-[#6B7A7A] font-light leading-[1.9]">
               <p>
-                Nestled in a warm, light-filled home in Parkside, Yosana is a quietly special place to slow down and return to your body. It is not a gym, not a studio — it is a home, and that is the point.
+                Yosana Yoga Home was created by <strong className="text-[#1A2B2B] font-normal">Warunee</strong> — known warmly to her students as Pack — an Ashtanga Vinyasa specialist based in Parkside, Adelaide. What began as a deeply personal practice grew into a quiet, intentional space where others could experience yoga the way it was always meant to feel: unhurried, attentive, and genuinely caring.
               </p>
               <p>
-                Warunee — known to her students as Pack — is an Ashtanga Vinyasa specialist who meets each student exactly where they are. Patient, precise, and deeply attentive: she watches every body with care and adjusts with gentleness.
+                Warunee brings a rare quality to her teaching. She watches carefully — reading each body with patience and precision, adjusting postures with a gentle hand, and meeting every student exactly where they are. Whether you have practised for years or are stepping onto a mat for the very first time, she has a gift for making you feel seen.
               </p>
               <p>
-                Classes are kept small on purpose, so no one gets lost, and everyone feels held.
+                Her studio is not a commercial space. It is her home — warm, light-filled, and quietly beautiful. The size of every class is kept deliberately small, because Warunee believes that real yoga cannot happen in a crowd. It happens in the space between breath and stillness, when a teacher is truly present with you.
               </p>
-            </div>
-
-            <div className="mt-10 grid grid-cols-3 gap-0 border border-[#E0DDD8] divide-x divide-[#E0DDD8]">
-              {[
-                { label: "Style", value: "Ashtanga\nVinyasa" },
-                { label: "Format", value: "Private\n& Group" },
-                { label: "Level", value: "All\nWelcome" },
-              ].map((s) => (
-                <div key={s.label} className="px-3 sm:px-5 py-5 sm:py-6 text-center">
-                  <p className="font-display font-light text-base sm:text-lg text-[#1A2B2B] mb-1 whitespace-pre-line leading-tight">{s.value}</p>
-                  <p className="text-[9px] uppercase tracking-widest text-[#A0A8A8]">{s.label}</p>
-                </div>
-              ))}
+              <p>
+                This is that space.
+              </p>
             </div>
           </motion.div>
         </div>
-      </div>
-
-      {/* Eucalyptus — bottom left */}
-      <div className="absolute bottom-0 left-0 w-[180px] sm:w-[240px] lg:w-[300px] pointer-events-none select-none opacity-50">
-        <Image src="/eucalyptus.png" alt="" width={300} height={200} className="w-full h-auto" style={{ transform: "scaleY(-1)" }} />
       </div>
     </section>
   );

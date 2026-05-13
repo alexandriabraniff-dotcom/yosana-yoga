@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "motion/react";
-import Image from "next/image";
 
 const plans = [
   {
@@ -36,16 +35,6 @@ const plans = [
 export default function Pricing() {
   return (
     <section id="pricing" className="bg-[#F7F5F1] relative overflow-hidden">
-
-      {/* Eucalyptus — top left */}
-      <div className="absolute top-0 left-0 w-[200px] sm:w-[280px] lg:w-[360px] pointer-events-none select-none opacity-55">
-        <Image src="/eucalyptus.png" alt="" width={360} height={240} className="w-full h-auto" />
-      </div>
-
-      {/* Eucalyptus — bottom right */}
-      <div className="absolute bottom-0 right-0 w-[160px] sm:w-[220px] lg:w-[300px] pointer-events-none select-none opacity-40">
-        <Image src="/eucalyptus.png" alt="" width={300} height={200} className="w-full h-auto" style={{ transform: "scale(-1)" }} />
-      </div>
 
       <div className="max-w-7xl mx-auto px-6 sm:px-8 md:px-12 py-20 md:py-32 relative z-10">
 

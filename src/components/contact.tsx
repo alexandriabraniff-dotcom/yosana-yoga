@@ -8,16 +8,6 @@ export default function Contact() {
   return (
     <section id="contact" className="bg-white relative overflow-hidden">
 
-      {/* Eucalyptus — bottom left */}
-      <div className="absolute bottom-0 left-0 w-[200px] sm:w-[280px] lg:w-[360px] pointer-events-none select-none opacity-50">
-        <Image src="/eucalyptus.png" alt="" width={360} height={240} className="w-full h-auto" style={{ transform: "scaleY(-1)" }} />
-      </div>
-
-      {/* Eucalyptus — top right */}
-      <div className="absolute top-0 right-0 w-[160px] sm:w-[220px] lg:w-[280px] pointer-events-none select-none opacity-40">
-        <Image src="/eucalyptus.png" alt="" width={280} height={187} className="w-full h-auto" style={{ transform: "scale(-1)" }} />
-      </div>
-
       <div className="max-w-7xl mx-auto px-6 sm:px-8 md:px-12 py-20 md:py-32 relative z-10">
 
         {/* Header */}
@@ -93,14 +83,9 @@ export default function Contact() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.7, delay: 0.1 }}
-            className="lg:col-span-2 bg-[#1B5C6E] p-8 sm:p-10 flex flex-col justify-between relative overflow-hidden"
+            className="lg:col-span-2 bg-[#1B5C6E] p-8 sm:p-10 flex flex-col justify-between"
           >
-            {/* Eucalyptus inside panel */}
-            <div className="absolute top-0 right-0 w-36 pointer-events-none select-none opacity-20">
-              <Image src="/eucalyptus.png" alt="" width={140} height={93} className="w-full h-auto brightness-0 invert" style={{ transform: "scaleX(-1)" }} />
-            </div>
-
-            <div className="relative z-10">
+            <div>
               <p className="text-[10px] uppercase tracking-[0.3em] text-white/40 mb-4">New Students</p>
               <h3 className="font-display font-light text-2xl sm:text-3xl text-white leading-tight mb-5">
                 Come for your{" "}
