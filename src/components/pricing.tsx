@@ -7,118 +7,107 @@ const plans = [
     number: "01",
     name: "Private Session",
     price: "Contact for pricing",
-    duration: "60 or 90 min",
-    description: "Fully tailored one-on-one session with personalised sequencing and hands-on adjustments.",
-    features: ["Personalised sequencing", "Hands-on adjustments", "All levels", "Mat & props provided"],
+    features: ["60 or 90 minutes", "Personalised sequencing", "Hands-on adjustments", "Mat & props provided", "All levels"],
+    cta: "Enquire",
+    featured: false,
   },
   {
     number: "02",
-    name: "Small Group Class",
+    name: "Small Group",
     price: "Contact for pricing",
-    duration: "60 min",
-    description: "Intimate group classes in a warm home setting. Kept deliberately small for real attention.",
-    features: ["Ashtanga Vinyasa flow", "Personal guidance", "All levels welcome", "Mat & props", "Complimentary tea"],
+    features: ["Ashtanga Vinyasa flow", "Kept deliberately small", "Personal guidance", "Mat & props", "Complimentary tea"],
+    cta: "Book a Spot",
     featured: true,
   },
   {
     number: "03",
     name: "First Class",
     price: "New students",
-    duration: "Come as you are",
-    description: "Never tried yoga? Come and see. No pressure, no expectations, beginners especially welcome.",
-    features: ["No experience needed", "Personal attention", "Relaxed & welcoming", "Mat & props provided"],
+    features: ["No experience needed", "All levels welcome", "Personal attention", "Mat & props provided"],
+    cta: "Say Hello",
+    featured: false,
   },
 ];
 
 export default function Pricing() {
   return (
-    <section id="pricing" className="bg-[#F7F5F1]">
-      <div className="max-w-7xl mx-auto px-6 sm:px-8 md:px-12 py-20 md:py-32">
+    <section id="pricing" className="bg-[#F7F5F1] py-20 md:py-28">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 md:px-12">
 
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-60px" }}
-          transition={{ duration: 0.65 }}
-          className="mb-16 md:mb-20"
+          transition={{ duration: 0.6 }}
+          className="mb-12 md:mb-14"
         >
-          <div className="flex items-center gap-3 mb-5">
+          <div className="flex items-center gap-3 mb-4">
             <div className="w-8 h-px bg-[#2A5240]" />
             <p className="text-[10px] uppercase tracking-[0.3em] text-[#2A5240]">Pricing</p>
           </div>
-          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
-            <h2 className="font-display font-light text-3xl sm:text-4xl md:text-5xl text-[#1A2B2B] leading-[1.1]">
+          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-3">
+            <h2 className="font-display font-light text-3xl sm:text-4xl text-[#1A2B2B] leading-[1.15]">
               <em className="italic">Simple</em> and personal.
             </h2>
-            <p className="text-sm text-[#6B7A7A] font-light max-w-xs sm:text-right leading-relaxed shrink-0">
-              Reach out directly. Warunee will find the right fit for you.
+            <p className="text-xs text-[#6B7A7A] font-light sm:text-right leading-relaxed shrink-0">
+              Reach out directly. Warunee will find<br className="hidden sm:block" /> the right fit for you.
             </p>
           </div>
         </motion.div>
 
-        {/* Plans list */}
-        <div className="divide-y divide-[#E0DDD8]">
+        {/* Plans */}
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
           {plans.map((plan, i) => (
             <motion.div
               key={plan.name}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-40px" }}
-              transition={{ duration: 0.55, delay: i * 0.1 }}
-              className={`group py-10 md:py-12 grid grid-cols-1 md:grid-cols-[1fr_auto] gap-8 md:gap-16 items-start ${
-                plan.featured ? "relative" : ""
+              transition={{ duration: 0.5, delay: i * 0.09 }}
+              className={`flex flex-col p-6 ${
+                plan.featured
+                  ? "bg-[#2A5240] text-white"
+                  : "bg-white border border-[#E8E5E0]"
               }`}
             >
-              {/* Featured marker */}
-              {plan.featured && (
-                <div className="absolute left-0 top-10 md:top-12 w-0.5 h-8 bg-[#2A5240]" />
-              )}
+              {/* Number */}
+              <span className={`font-display text-2xl font-light mb-4 ${plan.featured ? "text-white/20" : "text-[#DDDAD5]"}`}>
+                {plan.number}
+              </span>
 
-              <div className={plan.featured ? "pl-5" : ""}>
-                {/* Top row: number + name + price */}
-                <div className="flex flex-wrap items-baseline gap-x-5 gap-y-1 mb-4">
-                  <span className="font-display text-xs text-[#C4C0BA] tracking-widest">{plan.number}</span>
-                  <h3 className="font-display font-light text-xl sm:text-2xl md:text-3xl text-[#1A2B2B]">
-                    {plan.name}
-                  </h3>
-                  <span className={`text-xs uppercase tracking-[0.18em] font-light ml-auto md:ml-0 ${
-                    plan.featured ? "text-[#2A5240]" : "text-[#A0A8A8]"
-                  }`}>{plan.duration}</span>
-                </div>
+              {/* Name + price */}
+              <p className={`text-[10px] uppercase tracking-[0.25em] mb-1 ${plan.featured ? "text-[#8FC4D0]" : "text-[#2A5240]"}`}>
+                {plan.name}
+              </p>
+              <p className={`font-display font-light text-lg mb-5 ${plan.featured ? "text-white" : "text-[#1A2B2B]"}`}>
+                {plan.price}
+              </p>
 
-                <p className="text-sm text-[#6B7A7A] font-light leading-relaxed mb-7 max-w-lg">
-                  {plan.description}
-                </p>
+              {/* Divider */}
+              <div className={`h-px mb-5 ${plan.featured ? "bg-white/10" : "bg-[#F0EDE8]"}`} />
 
-                <ul className="flex flex-wrap gap-x-6 gap-y-2">
-                  {plan.features.map((f) => (
-                    <li key={f} className="flex items-center gap-2 text-xs font-light text-[#8A9090]">
-                      <span className="w-3 h-px bg-[#2A5240]/40 flex-shrink-0" />
-                      {f}
-                    </li>
-                  ))}
-                </ul>
-              </div>
+              {/* Features */}
+              <ul className="space-y-2.5 flex-1 mb-7">
+                {plan.features.map((f) => (
+                  <li key={f} className="flex items-center gap-2.5 text-xs font-light">
+                    <span className={`w-3 h-px flex-shrink-0 ${plan.featured ? "bg-[#8FC4D0]" : "bg-[#2A5240]/40"}`} />
+                    <span className={plan.featured ? "text-[#B8DDE6]" : "text-[#6B7A7A]"}>{f}</span>
+                  </li>
+                ))}
+              </ul>
 
-              {/* Right: price + CTA */}
-              <div className="flex flex-row md:flex-col items-center md:items-end gap-5 md:gap-4 md:pt-1">
-                <p className={`font-display font-light text-lg whitespace-nowrap ${
-                  plan.featured ? "text-[#2A5240]" : "text-[#1A2B2B]"
-                }`}>
-                  {plan.price}
-                </p>
-                <a
-                  href="#contact"
-                  className={`text-[10px] uppercase tracking-[0.2em] px-5 py-2.5 transition-all duration-300 whitespace-nowrap ${
-                    plan.featured
-                      ? "bg-[#2A5240] text-white hover:bg-[#1E3D2F]"
-                      : "border border-[#C4C0BA] text-[#1A2B2B] hover:border-[#2A5240] hover:text-[#2A5240]"
-                  }`}
-                >
-                  {plan.name === "First Class" ? "Say Hello" : plan.name === "Private Session" ? "Enquire" : "Book a Spot"}
-                </a>
-              </div>
+              {/* CTA */}
+              <a
+                href="#contact"
+                className={`text-center py-2.5 text-[10px] uppercase tracking-[0.2em] transition-all duration-300 ${
+                  plan.featured
+                    ? "bg-white text-[#2A5240] hover:bg-[#F4F2EE]"
+                    : "border border-[#C4C0BA] text-[#1A2B2B] hover:border-[#2A5240] hover:text-[#2A5240]"
+                }`}
+              >
+                {plan.cta}
+              </a>
             </motion.div>
           ))}
         </div>
