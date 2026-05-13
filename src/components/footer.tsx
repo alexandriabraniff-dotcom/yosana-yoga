@@ -1,67 +1,56 @@
-import { Globe, Heart, Mail } from "lucide-react";
-
 export default function Footer() {
   const year = new Date().getFullYear();
   return (
-    <footer className="bg-[#222] text-[#D9D0C3] py-16 px-6">
+    <footer className="bg-[#F4F2EE] border-t border-[#E0DDD8] py-12 px-6">
       <div className="max-w-6xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-12">
-          {/* Brand */}
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-8 mb-10">
+          {/* Wordmark */}
           <div>
-            <p className="font-display text-2xl text-[#F4EFE6] mb-3">
-              Yosana<span className="text-[#7A9B76]"> Yoga</span>
+            <p
+              className="tracking-[0.25em] text-sm font-light text-[#1B5C6E] uppercase mb-1"
+            >
+              YOSANA
             </p>
-            <p className="text-sm leading-relaxed text-[#A09890]">
-              A home for your practice. Come as you are, leave as you&apos;re meant to be.
-            </p>
+            <p className="text-xs text-[#6B7A7A] font-light">Yoga Home · Parkside, Adelaide</p>
           </div>
 
           {/* Links */}
-          <div>
-            <p className="text-xs uppercase tracking-widest text-[#7A9B76] mb-4">Navigate</p>
-            <nav className="flex flex-col gap-2">
-              {["About", "Classes", "Pricing", "Testimonials", "Contact"].map((item) => (
-                <a
-                  key={item}
-                  href={`#${item.toLowerCase()}`}
-                  className="text-sm text-[#A09890] hover:text-[#F4EFE6] transition-colors"
-                >
-                  {item}
-                </a>
-              ))}
-            </nav>
-          </div>
+          <nav className="flex flex-wrap gap-6">
+            {["About", "Classes", "Pricing", "Contact"].map((item) => (
+              <a
+                key={item}
+                href={`#${item.toLowerCase()}`}
+                className="text-xs uppercase tracking-widest text-[#6B7A7A] hover:text-[#1B5C6E] transition-colors"
+              >
+                {item}
+              </a>
+            ))}
+          </nav>
 
-          {/* Contact */}
-          <div>
-            <p className="text-xs uppercase tracking-widest text-[#7A9B76] mb-4">Find Us</p>
-            <p className="text-sm text-[#A09890] leading-relaxed">
-              Adelaide, South Australia
-            </p>
+          {/* Social */}
+          <div className="flex gap-4">
             <a
-              href="mailto:hello@yosanayoga.com.au"
-              className="text-sm text-[#A09890] hover:text-[#F4EFE6] transition-colors mt-1 block"
+              href="https://www.instagram.com/yosana.adl"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xs text-[#6B7A7A] hover:text-[#1B5C6E] transition-colors uppercase tracking-widest"
             >
-              hello@yosanayoga.com.au
+              Instagram
             </a>
-
-            <div className="flex gap-4 mt-5">
-              <a href="#" aria-label="Website" className="text-[#7A6F63] hover:text-[#7A9B76] transition-colors">
-                <Globe size={18} />
-              </a>
-              <a href="#" aria-label="Made with love" className="text-[#7A6F63] hover:text-[#7A9B76] transition-colors">
-                <Heart size={18} />
-              </a>
-              <a href="mailto:hello@yosanayoga.com.au" aria-label="Email" className="text-[#7A6F63] hover:text-[#7A9B76] transition-colors">
-                <Mail size={18} />
-              </a>
-            </div>
+            <a
+              href="https://www.facebook.com/yosanaco/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xs text-[#6B7A7A] hover:text-[#1B5C6E] transition-colors uppercase tracking-widest"
+            >
+              Facebook
+            </a>
           </div>
         </div>
 
-        <div className="border-t border-[#333] pt-8 text-xs text-[#5A5450] flex flex-col md:flex-row justify-between gap-2">
-          <p>&copy; {year} Yosana Yoga Home. All rights reserved.</p>
-          <p>Made with care in Adelaide, South Australia.</p>
+        <div className="pt-8 border-t border-[#E0DDD8] text-xs text-[#A0A8A8] flex flex-col md:flex-row justify-between gap-2 font-light">
+          <p>&copy; {year} Yosana Yoga Home, Parkside SA. All rights reserved.</p>
+          <p>Ashtanga Vinyasa · Private &amp; Group · All Levels Welcome</p>
         </div>
       </div>
     </footer>

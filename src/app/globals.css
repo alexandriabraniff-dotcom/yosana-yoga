@@ -21,34 +21,34 @@
 }
 
 :root {
-  /* Warm cream background */
-  --background: #F4EFE6;
-  --foreground: #222222;
+  /* Warm white base */
+  --background: #FAFAF8;
+  --foreground: #1A2B2B;
 
-  /* Sage green — primary accent */
-  --primary: #7A9B76;
-  --primary-foreground: #F4EFE6;
+  /* Brand teal (from logo) */
+  --primary: #1B5C6E;
+  --primary-foreground: #FAFAF8;
 
-  /* Soft warm surface */
-  --secondary: #EDE7DC;
-  --secondary-foreground: #444;
+  /* Soft off-white surface */
+  --secondary: #F4F2EE;
+  --secondary-foreground: #2A3D3D;
 
-  /* Muted tones */
-  --muted: #E8E1D6;
-  --muted-foreground: #7A6F63;
+  /* Muted warm grey */
+  --muted: #EAE8E4;
+  --muted-foreground: #6B7A7A;
 
-  /* Terracotta accent */
-  --accent: #B5755C;
-  --accent-foreground: #F4EFE6;
+  /* Warm sand accent */
+  --accent: #C4A882;
+  --accent-foreground: #1A2B2B;
 
   /* Borders */
-  --border: #D9D0C3;
+  --border: #E0DDD8;
 
   /* Card */
-  --card: #FDFAF5;
-  --card-foreground: #222222;
+  --card: #FFFFFF;
+  --card-foreground: #1A2B2B;
 
-  --radius: 0.5rem;
+  --radius: 0.75rem;
 }
 
 @layer base {
@@ -71,4 +71,25 @@
   h1, h2, h3, h4 {
     font-family: var(--font-display), serif;
   }
+}
+
+/* Leaf SVG texture utility */
+.leaf-texture {
+  position: relative;
+  overflow: hidden;
+}
+
+.leaf-texture::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cpath d='M20 100 Q60 20 100 60 Q60 80 20 100Z' fill='%231B5C6E' opacity='0.04'/%3E%3Cpath d='M0 80 Q40 10 80 50 Q40 70 0 80Z' fill='%231B5C6E' opacity='0.03'/%3E%3C/svg%3E");
+  background-size: 120px 120px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.leaf-texture > * {
+  position: relative;
+  z-index: 1;
 }
