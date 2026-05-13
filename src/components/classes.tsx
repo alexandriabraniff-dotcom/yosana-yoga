@@ -11,7 +11,7 @@ const classes = [
     name: "Private Session",
     tag: "One-on-one with Warunee",
     image: "/489972824_18307666117237707_9088277353174030011_n.jpg",
-    imageOffset: "center calc(100% - 40px)",
+    imageOffset: "center center",
     details: {
       description:
         "A session built entirely around you: your body, your goals, your pace. Warunee guides you through Ashtanga Vinyasa sequences with hands-on adjustments and careful, personalised attention.",
