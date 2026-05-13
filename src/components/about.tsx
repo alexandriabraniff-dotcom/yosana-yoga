@@ -20,11 +20,11 @@ export default function About() {
             <div className="absolute inset-0 translate-x-3 translate-y-3 sm:translate-x-4 sm:translate-y-4 bg-[#2A5240]/8" />
             <div className="relative h-[340px] sm:h-[420px] lg:h-[500px] overflow-hidden">
               <Image
-                src="https://images.unsplash.com/photo-1599447421416-3414500d18a5?w=900&q=85&auto=format&fit=crop"
-                alt="Cozy home yoga studio with natural light and plants"
+                src="/yoga-with-pack-yosana.jpg"
+                alt="Warunee (Pack) — Ashtanga Vinyasa yoga teacher at Yosana Yoga Home, Parkside"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
-                className="object-cover"
+                className="object-cover object-top"
               />
             </div>
           </motion.div>
