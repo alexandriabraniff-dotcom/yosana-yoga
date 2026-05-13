@@ -26,6 +26,14 @@ export default function Nav() {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50">
+      {/* Creator banner */}
+      <div className="bg-[#2A5240] text-white text-center text-xs py-2 px-4">
+        Website created by <strong>Alexandria Braniff</strong>,{" "}
+        <a href="mailto:alexandriabraniff@gmail.com" className="underline hover:opacity-80">
+          alexandriabraniff@gmail.com
+        </a>
+      </div>
+
       <div className="h-px bg-[#E0DDD8] w-full" />
 
       <div className={`transition-all duration-400 ${scrolled ? "bg-white/96 backdrop-blur-md shadow-sm shadow-black/[0.04]" : "bg-white"}`}>
