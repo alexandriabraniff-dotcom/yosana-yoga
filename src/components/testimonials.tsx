@@ -62,15 +62,12 @@ export default function Testimonials() {
               {/* Pin dot */}
               <div className="absolute top-4 left-1/2 -translate-x-1/2 w-3 h-3 rounded-full bg-[#2A5240]/20 shadow-inner" />
 
-              <div className="px-7 pt-10 pb-8">
+              <div className="px-7 pt-10 pb-9">
                 {/* Quote mark */}
                 <span className="font-display text-3xl text-[#2A5240]/20 leading-none block mb-3 select-none">&ldquo;</span>
-                <p className="font-display font-light text-base text-[#3A3A3A] leading-[1.75] italic mb-8">
+                <p className="font-display font-light text-base text-[#3A3A3A] leading-[1.75] italic">
                   {t.quote}
                 </p>
-                <div className="border-t border-black/8 pt-4">
-                  <p className="text-[10px] uppercase tracking-widest text-[#8A8A8A]">{t.name}</p>
-                </div>
               </div>
             </motion.div>
           ))}
