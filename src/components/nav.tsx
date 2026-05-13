@@ -55,10 +55,6 @@ export default function Nav() {
                 {link.label}
               </a>
             ))}
-            <a href="#contact"
-              className="text-[10px] uppercase tracking-[0.2em] text-white bg-[#2A5240] px-4 py-2 hover:bg-[#1E3D2F] transition-colors">
-              Book
-            </a>
           </nav>
 
           {/* Mobile layout */}
@@ -90,10 +86,6 @@ export default function Nav() {
                   {link.label}
                 </a>
               ))}
-              <a href="#contact" onClick={() => setOpen(false)}
-                className="text-[10px] uppercase tracking-[0.2em] text-[#2A5240] font-medium py-4">
-                Book a Class
-              </a>
             </nav>
           </motion.div>
         )}
