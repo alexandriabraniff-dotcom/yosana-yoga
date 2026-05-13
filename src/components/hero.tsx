@@ -5,27 +5,42 @@ import { motion } from "motion/react";
 
 export default function Hero() {
   return (
-    <section className="min-h-screen bg-white flex items-center px-6 md:px-12 lg:px-20 pt-24 pb-16">
-      <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+    <section className="h-screen bg-white flex flex-col overflow-hidden">
 
-        {/* LEFT — text + buttons */}
-        <div className="flex flex-col justify-center">
-          {/* Location tag */}
-          <motion.p
-            initial={{ opacity: 0, y: 12 }}
+      {/* Main grid — fills the viewport below the nav (nav is ~66px) */}
+      <div className="flex-1 grid grid-cols-1 lg:grid-cols-2 min-h-0">
+
+        {/* LEFT — text column */}
+        <div className="flex flex-col justify-center px-10 md:px-16 lg:px-20 py-12 relative">
+
+          {/* Subtle leaf — top left corner */}
+          <div className="absolute top-0 left-0 pointer-events-none">
+            <svg className="w-56 h-56 opacity-[0.06] text-[#1B5C6E] -translate-x-10 -translate-y-10" viewBox="0 0 200 200" fill="currentColor">
+              <path d="M100 10 Q170 40 175 140 Q110 175 40 140 Q10 80 100 10Z" />
+              <path d="M100 10 L103 168" stroke="currentColor" strokeWidth="1.5" fill="none" />
+              <path d="M101 60 Q145 85 155 130" stroke="currentColor" strokeWidth="1" fill="none" />
+              <path d="M102 100 Q62 122 50 162" stroke="currentColor" strokeWidth="1" fill="none" />
+            </svg>
+          </div>
+
+          {/* Location pill */}
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.1 }}
-            className="text-[10px] uppercase tracking-[0.3em] text-[#1B5C6E] mb-8"
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="inline-flex items-center gap-2 mb-10 w-fit"
           >
-            Parkside · Adelaide
-          </motion.p>
+            <span className="w-4 h-px bg-[#1B5C6E]" />
+            <span className="text-[10px] uppercase tracking-[0.28em] text-[#1B5C6E]">Parkside · Adelaide</span>
+          </motion.div>
 
-          {/* Main headline */}
+          {/* Headline */}
           <motion.h1
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 22 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, delay: 0.2 }}
-            className="font-display font-light text-5xl md:text-6xl xl:text-7xl text-[#1A2B2B] leading-[1.1] tracking-tight mb-6"
+            className="font-display font-light leading-[1.08] tracking-tight text-[#1A2B2B] mb-7"
+            style={{ fontSize: "clamp(2.8rem, 5vw, 4.5rem)" }}
           >
             A home for
             <br />
@@ -34,64 +49,65 @@ export default function Hero() {
 
           {/* Subtext */}
           <motion.div
-            initial={{ opacity: 0, y: 16 }}
+            initial={{ opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.35 }}
-            className="space-y-1 mb-10"
+            className="space-y-1.5 mb-12"
           >
-            <p className="text-sm text-[#6B7A7A] font-light">
+            <p className="text-sm text-[#6B7A7A] font-light leading-relaxed">
               Intimate Ashtanga Vinyasa yoga with Warunee (Pack).
             </p>
-            <p className="text-sm text-[#6B7A7A] font-light">
+            <p className="text-sm text-[#6B7A7A] font-light leading-relaxed">
               Private sessions &amp; small group classes — all levels welcome.
             </p>
           </motion.div>
 
           {/* Buttons */}
           <motion.div
-            initial={{ opacity: 0, y: 12 }}
+            initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.5 }}
-            className="flex flex-row gap-4"
+            className="flex flex-row gap-3"
           >
             <a
               href="#contact"
-              className="bg-[#1A2B2B] text-white px-8 py-4 rounded-sm text-xs uppercase tracking-[0.12em] hover:bg-[#1B5C6E] transition-all duration-300"
+              className="bg-[#1A2B2B] text-white px-8 py-3.5 text-xs uppercase tracking-[0.15em] hover:bg-[#1B5C6E] transition-colors duration-300"
             >
               Book a Class
             </a>
             <a
               href="#about"
-              className="border border-[#1A2B2B] text-[#1A2B2B] px-8 py-4 rounded-sm text-xs uppercase tracking-[0.12em] hover:border-[#1B5C6E] hover:text-[#1B5C6E] transition-all duration-300 bg-white"
+              className="border border-[#C4C0BA] text-[#1A2B2B] px-8 py-3.5 text-xs uppercase tracking-[0.15em] hover:border-[#1B5C6E] hover:text-[#1B5C6E] transition-colors duration-300"
             >
               Learn More
             </a>
           </motion.div>
+
         </div>
 
-        {/* RIGHT — image */}
+        {/* RIGHT — full-height image */}
         <motion.div
-          initial={{ opacity: 0, x: 24 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.9, delay: 0.25 }}
-          className="relative h-[480px] lg:h-[580px] rounded-sm overflow-hidden border border-[#E0DDD8]"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1, delay: 0.15 }}
+          className="relative hidden lg:block"
         >
           <Image
             src="https://images.unsplash.com/photo-1545389336-cf090694435e?w=1200&q=85&auto=format&fit=crop"
-            alt="Warunee teaching yoga in a calm, light-filled home studio"
+            alt="Yoga practice in a calm, light-filled home studio"
             fill
             priority
+            sizes="50vw"
             className="object-cover object-center"
           />
-          {/* Very subtle leaf overlay on image */}
-          <div className="absolute inset-0 pointer-events-none">
-            <svg
-              className="absolute bottom-0 left-0 w-48 h-48 opacity-[0.12] text-white"
-              viewBox="0 0 200 200"
-              fill="currentColor"
-            >
-              <path d="M30 180 Q10 90 90 20 Q160 50 170 140 Q100 180 30 180Z" />
-              <path d="M30 180 L140 40" stroke="white" strokeWidth="1.5" fill="none" opacity="0.6" />
+          {/* Thin left border edge */}
+          <div className="absolute inset-y-0 left-0 w-px bg-[#E0DDD8]" />
+
+          {/* Corner leaf — bottom right of image */}
+          <div className="absolute bottom-0 right-0 pointer-events-none">
+            <svg className="w-40 h-40 opacity-20 text-white translate-x-6 translate-y-6" viewBox="0 0 200 200" fill="currentColor">
+              <path d="M100 10 Q170 40 175 140 Q110 175 40 140 Q10 80 100 10Z" />
+              <path d="M100 10 L103 168" stroke="white" strokeWidth="1.5" fill="none" />
             </svg>
           </div>
         </motion.div>

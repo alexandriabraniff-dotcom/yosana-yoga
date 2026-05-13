@@ -6,127 +6,110 @@ import { MapPin, Mail } from "lucide-react";
 
 export default function Contact() {
   return (
-    <section id="contact" className="py-24 md:py-36 px-6 bg-[#FAFAF8] relative overflow-hidden">
-      {/* Bottom leaf decal */}
-      <div className="absolute bottom-0 right-0 pointer-events-none">
-        <svg
-          className="w-96 h-96 opacity-[0.05] text-[#1B5C6E] translate-x-24 translate-y-16"
-          viewBox="0 0 300 300"
-          fill="currentColor"
-        >
-          <path d="M150 10 Q240 60 260 180 Q190 240 100 210 Q30 150 150 10Z" />
-          <path d="M150 10 L155 240" stroke="currentColor" strokeWidth="2" fill="none" />
-          <path d="M152 70 Q200 100 215 150" stroke="currentColor" strokeWidth="1" fill="none" />
-          <path d="M153 120 Q108 148 88 195" stroke="currentColor" strokeWidth="1" fill="none" />
-        </svg>
-      </div>
+    <section id="contact" className="bg-white relative overflow-hidden">
 
-      <div className="max-w-6xl mx-auto relative z-10">
+      <div className="max-w-7xl mx-auto px-8 md:px-12 py-24 md:py-32">
+
+        {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.65 }}
-          className="text-center mb-16"
+          className="mb-16"
         >
-          <p className="text-[10px] uppercase tracking-[0.3em] text-[#1B5C6E] mb-5">Get in Touch</p>
-          <h2 className="font-display font-light text-4xl md:text-5xl text-[#1A2B2B] leading-[1.15]">
-            Ready to begin?{" "}
-            <em className="italic text-[#1B5C6E]">Say hello.</em>
-          </h2>
-          <p className="text-sm text-[#6B7A7A] mt-4 max-w-sm mx-auto font-light leading-relaxed">
-            Warunee personally responds to every enquiry. There is no chatbot here — just a real conversation.
-          </p>
+          <div className="flex items-center gap-3 mb-5">
+            <div className="w-8 h-px bg-[#1B5C6E]" />
+            <p className="text-[10px] uppercase tracking-[0.3em] text-[#1B5C6E]">Get in Touch</p>
+          </div>
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
+            <h2 className="font-display font-light text-4xl md:text-5xl text-[#1A2B2B] leading-[1.1]">
+              Ready to begin?{" "}
+              <em className="italic text-[#1B5C6E]">Say hello.</em>
+            </h2>
+            <p className="text-sm text-[#6B7A7A] font-light max-w-xs md:text-right leading-relaxed">
+              Warunee personally replies to every message — no chatbots, just a real conversation.
+            </p>
+          </div>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
-          {/* Studio image + info */}
+        {/* Two-column layout */}
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-6">
+
+          {/* LEFT — studio image + info (3 cols) */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-80px" }}
             transition={{ duration: 0.7 }}
+            className="lg:col-span-3 flex flex-col gap-4"
           >
-            <div className="relative h-64 rounded-3xl overflow-hidden mb-6">
+            <div className="relative h-72 overflow-hidden">
               <Image
                 src="https://images.unsplash.com/photo-1600618528240-fb9fc964b853?w=900&q=80&auto=format&fit=crop"
-                alt="A warm, light-filled home yoga studio"
+                alt="A warm light-filled yoga space"
                 fill
+                sizes="(max-width: 1024px) 100vw, 60vw"
                 className="object-cover"
               />
               <div className="absolute inset-0 bg-[#1B5C6E]/10" />
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div className="bg-white rounded-2xl p-6">
-                <div className="w-8 h-8 bg-[#1B5C6E]/10 rounded-xl flex items-center justify-center mb-4">
-                  <MapPin size={14} className="text-[#1B5C6E]" />
+            <div className="grid grid-cols-2 gap-4">
+              <div className="border border-[#E0DDD8] p-6">
+                <div className="flex items-center gap-2 mb-3">
+                  <MapPin size={12} className="text-[#1B5C6E]" />
+                  <p className="text-[10px] uppercase tracking-widest text-[#6B7A7A]">Location</p>
                 </div>
-                <p className="text-[10px] uppercase tracking-widest text-[#6B7A7A] mb-1">Location</p>
                 <p className="text-sm text-[#1A2B2B] font-light">Parkside, Adelaide SA</p>
-                <p className="text-xs text-[#6B7A7A] mt-1 font-light">Address shared on booking</p>
+                <p className="text-xs text-[#A0A8A8] mt-1 font-light">Address shared on booking</p>
               </div>
-
-              <div className="bg-white rounded-2xl p-6">
-                <div className="w-8 h-8 bg-[#1B5C6E]/10 rounded-xl flex items-center justify-center mb-4">
-                  <Mail size={14} className="text-[#1B5C6E]" />
+              <div className="border border-[#E0DDD8] p-6">
+                <div className="flex items-center gap-2 mb-3">
+                  <Mail size={12} className="text-[#1B5C6E]" />
+                  <p className="text-[10px] uppercase tracking-widest text-[#6B7A7A]">Social</p>
                 </div>
-                <p className="text-[10px] uppercase tracking-widest text-[#6B7A7A] mb-1">Social</p>
-                <a
-                  href="https://www.instagram.com/yosana.adl"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sm text-[#1B5C6E] font-light hover:underline block"
-                >
-                  @yosana.adl
-                </a>
-                <a
-                  href="https://www.facebook.com/yosanaco/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-xs text-[#6B7A7A] font-light hover:text-[#1B5C6E] transition-colors block mt-1"
-                >
-                  Facebook: yosanaco
-                </a>
+                <a href="https://www.instagram.com/yosana.adl" target="_blank" rel="noopener noreferrer"
+                  className="text-sm text-[#1B5C6E] font-light hover:underline block">@yosana.adl</a>
+                <a href="https://www.facebook.com/yosanaco/" target="_blank" rel="noopener noreferrer"
+                  className="text-xs text-[#A0A8A8] font-light hover:text-[#1B5C6E] transition-colors mt-1 block">facebook.com/yosanaco</a>
               </div>
             </div>
           </motion.div>
 
-          {/* CTA panel */}
+          {/* RIGHT — CTA panel (2 cols) */}
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-80px" }}
             transition={{ duration: 0.7, delay: 0.1 }}
-            className="bg-[#1B5C6E] rounded-3xl p-10 text-white relative overflow-hidden"
+            className="lg:col-span-2 bg-[#1B5C6E] p-10 flex flex-col justify-between relative overflow-hidden"
           >
-            {/* Inner leaf texture */}
+            {/* Leaf inside panel */}
             <div className="absolute top-0 right-0 pointer-events-none">
-              <svg
-                className="w-48 h-48 opacity-[0.08] text-white translate-x-10 -translate-y-10"
-                viewBox="0 0 200 200"
-                fill="currentColor"
-              >
-                <path d="M100 10 Q160 40 170 130 Q110 170 50 130 Q20 80 100 10Z" />
-                <path d="M100 10 L102 160" stroke="currentColor" strokeWidth="1.5" fill="none" />
+              <svg className="w-48 h-48 opacity-[0.08] text-white translate-x-10 -translate-y-10" viewBox="0 0 200 200" fill="currentColor">
+                <path d="M100 10 Q170 40 175 140 Q110 175 40 140 Q10 80 100 10Z" />
+                <path d="M100 10 L103 168" stroke="white" strokeWidth="1.5" fill="none" />
               </svg>
             </div>
 
-            <p className="text-[10px] uppercase tracking-[0.3em] text-[#8FC4D0] mb-3 relative z-10">New to Yosana?</p>
-            <h3 className="font-display font-light text-3xl mb-5 leading-tight relative z-10">
-              Come for your{" "}
-              <em className="italic">first class.</em>
-            </h3>
-            <p className="text-[#B8D8E0] text-sm leading-relaxed mb-8 font-light relative z-10">
-              There is no better way to understand whether a practice is right for you than simply showing up. Warunee welcomes first-timers warmly, with no judgment and no rush. Reach out via Instagram, Facebook, or the links below.
-            </p>
+            <div className="relative z-10">
+              <p className="text-[10px] uppercase tracking-[0.3em] text-white/40 mb-4">New Students</p>
+              <h3 className="font-display font-light text-3xl text-white leading-tight mb-5">
+                Come for your{" "}
+                <em className="italic opacity-75">first class.</em>
+              </h3>
+              <p className="text-sm text-white/60 font-light leading-relaxed">
+                There is no better way to know if a practice is right for you than simply showing up. Reach out via Instagram or Facebook — Warunee will take it from there.
+              </p>
+            </div>
 
-            <div className="space-y-3 relative z-10">
+            <div className="relative z-10 space-y-3 mt-10">
               <a
                 href="https://www.instagram.com/yosana.adl"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 w-full bg-white text-[#1B5C6E] text-center py-4 px-6 rounded-full text-xs uppercase tracking-widest hover:bg-[#F4F2EE] transition-all duration-300 hover:scale-[1.01]"
+                className="flex items-center justify-center w-full bg-white text-[#1B5C6E] py-4 text-[10px] uppercase tracking-[0.2em] hover:bg-[#F4F2EE] transition-colors"
               >
                 Message on Instagram
               </a>
@@ -134,15 +117,14 @@ export default function Contact() {
                 href="https://www.facebook.com/yosanaco/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 w-full border border-white/30 text-white text-center py-4 px-6 rounded-full text-xs uppercase tracking-widest hover:border-white/60 transition-all duration-300"
+                className="flex items-center justify-center w-full border border-white/25 text-white py-4 text-[10px] uppercase tracking-[0.2em] hover:border-white/60 transition-colors"
               >
                 Message on Facebook
               </a>
+              <p className="text-[10px] text-white/30 text-center pt-2 font-light">
+                Usually replies within one business day.
+              </p>
             </div>
-
-            <p className="text-[#6FA8B8] text-xs mt-6 text-center font-light relative z-10">
-              Warunee replies personally — usually within a day.
-            </p>
           </motion.div>
         </div>
       </div>
