@@ -5,12 +5,12 @@ export default function Footer() {
 
       <div className="max-w-7xl mx-auto px-6 sm:px-8 md:px-12 py-10 md:py-12">
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-6 sm:gap-8 mb-8 md:mb-10">
-          <p className="tracking-[0.3em] text-sm font-light text-[#1B5C6E] uppercase">YOSANA</p>
+          <p className="tracking-[0.3em] text-sm font-light text-[#2A5240] uppercase">YOSANA</p>
 
           <nav className="flex flex-wrap gap-5 sm:gap-8">
             {["About", "Classes", "Pricing", "Contact"].map((item) => (
               <a key={item} href={`#${item.toLowerCase()}`}
-                className="text-[10px] uppercase tracking-[0.2em] text-[#6B7A7A] hover:text-[#1B5C6E] transition-colors">
+                className="text-[10px] uppercase tracking-[0.2em] text-[#6B7A7A] hover:text-[#2A5240] transition-colors">
                 {item}
               </a>
             ))}
@@ -18,9 +18,9 @@ export default function Footer() {
 
           <div className="flex gap-5 sm:gap-6">
             <a href="https://www.instagram.com/yosana.adl" target="_blank" rel="noopener noreferrer"
-              className="text-[10px] uppercase tracking-[0.2em] text-[#6B7A7A] hover:text-[#1B5C6E] transition-colors">Instagram</a>
+              className="text-[10px] uppercase tracking-[0.2em] text-[#6B7A7A] hover:text-[#2A5240] transition-colors">Instagram</a>
             <a href="https://www.facebook.com/yosanaco/" target="_blank" rel="noopener noreferrer"
-              className="text-[10px] uppercase tracking-[0.2em] text-[#6B7A7A] hover:text-[#1B5C6E] transition-colors">Facebook</a>
+              className="text-[10px] uppercase tracking-[0.2em] text-[#6B7A7A] hover:text-[#2A5240] transition-colors">Facebook</a>
           </div>
         </div>
 

@@ -46,8 +46,8 @@ export default function Pricing() {
           className="mb-12 md:mb-16"
         >
           <div className="flex items-center gap-3 mb-5">
-            <div className="w-8 h-px bg-[#1B5C6E]" />
-            <p className="text-[10px] uppercase tracking-[0.3em] text-[#1B5C6E]">Pricing</p>
+            <div className="w-8 h-px bg-[#2A5240]" />
+            <p className="text-[10px] uppercase tracking-[0.3em] text-[#2A5240]">Pricing</p>
           </div>
           <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
             <h2 className="font-display font-light text-3xl sm:text-4xl md:text-5xl text-[#1A2B2B] leading-[1.1]">
@@ -68,14 +68,14 @@ export default function Pricing() {
               viewport={{ once: true, margin: "-40px" }}
               transition={{ duration: 0.55, delay: i * 0.1 }}
               className={`flex flex-col p-7 sm:p-8 ${
-                plan.teal ? "bg-[#1B5C6E] text-white" : "bg-white border border-[#E0DDD8]"
+                plan.teal ? "bg-[#2A5240] text-white" : "bg-white border border-[#E0DDD8]"
               }`}
             >
               <span className={`font-display text-3xl sm:text-4xl font-light mb-5 sm:mb-6 ${plan.teal ? "text-white/20" : "text-[#E0DDD8]"}`}>
                 {plan.number}
               </span>
 
-              <p className={`text-[10px] uppercase tracking-widest mb-2 ${plan.teal ? "text-[#8FC4D0]" : "text-[#1B5C6E]"}`}>
+              <p className={`text-[10px] uppercase tracking-widest mb-2 ${plan.teal ? "text-[#8FC4D0]" : "text-[#2A5240]"}`}>
                 {plan.name}
               </p>
               <p className={`font-display font-light text-xl sm:text-2xl mb-3 ${plan.teal ? "text-white" : "text-[#1A2B2B]"}`}>
@@ -88,7 +88,7 @@ export default function Pricing() {
               <ul className="space-y-2 mb-8 sm:mb-10">
                 {plan.features.map((f) => (
                   <li key={f} className="flex items-center gap-2 text-xs font-light">
-                    <span className={`w-3 h-px flex-shrink-0 ${plan.teal ? "bg-[#8FC4D0]" : "bg-[#1B5C6E]"}`} />
+                    <span className={`w-3 h-px flex-shrink-0 ${plan.teal ? "bg-[#8FC4D0]" : "bg-[#2A5240]"}`} />
                     <span className={plan.teal ? "text-[#C5E5ED]" : "text-[#6B7A7A]"}>{f}</span>
                   </li>
                 ))}
@@ -98,8 +98,8 @@ export default function Pricing() {
                 href="#contact"
                 className={`text-center py-3 px-6 text-[10px] uppercase tracking-[0.2em] transition-all duration-300 ${
                   plan.teal
-                    ? "bg-white text-[#1B5C6E] hover:bg-[#F4F2EE]"
-                    : "border border-[#C4C0BA] text-[#1A2B2B] hover:border-[#1B5C6E] hover:text-[#1B5C6E]"
+                    ? "bg-white text-[#2A5240] hover:bg-[#F4F2EE]"
+                    : "border border-[#C4C0BA] text-[#1A2B2B] hover:border-[#2A5240] hover:text-[#2A5240]"
                 }`}
               >
                 {plan.cta}

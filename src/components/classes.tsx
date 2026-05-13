@@ -32,12 +32,12 @@ export default function Classes() {
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-12 md:mb-16">
           <div>
             <div className="flex items-center gap-3 mb-5">
-              <div className="w-8 h-px bg-[#1B5C6E]" />
-              <p className="text-[10px] uppercase tracking-[0.3em] text-[#1B5C6E]">The Practice</p>
+              <div className="w-8 h-px bg-[#2A5240]" />
+              <p className="text-[10px] uppercase tracking-[0.3em] text-[#2A5240]">The Practice</p>
             </div>
             <h2 className="font-display font-light text-3xl sm:text-4xl md:text-5xl text-[#1A2B2B] leading-[1.1]">
               Ashtanga Vinyasa,{" "}
-              <em className="italic text-[#1B5C6E]">your way.</em>
+              <em className="italic text-[#2A5240]">your way.</em>
             </h2>
           </div>
           <p className="text-sm text-[#6B7A7A] font-light max-w-xs sm:text-right leading-relaxed shrink-0">
@@ -54,7 +54,7 @@ export default function Classes() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-40px" }}
             transition={{ duration: 0.6, ease: "easeOut", delay: i * 0.1 }}
-            className="group border border-[#E0DDD8] overflow-hidden hover:border-[#1B5C6E]/30 transition-colors duration-300"
+            className="group border border-[#E0DDD8] overflow-hidden hover:border-[#2A5240]/30 transition-colors duration-300"
           >
             <div className="relative h-52 sm:h-64 overflow-hidden">
               <Image
@@ -70,7 +70,7 @@ export default function Classes() {
             </div>
 
             <div className="p-6 sm:p-8">
-              <p className="text-[10px] uppercase tracking-widest text-[#1B5C6E] mb-2">{c.subtitle}</p>
+              <p className="text-[10px] uppercase tracking-widest text-[#2A5240] mb-2">{c.subtitle}</p>
               <h3 className="font-display font-light text-xl sm:text-2xl text-[#1A2B2B] mb-3 sm:mb-4">{c.name}</h3>
               <p className="text-sm text-[#6B7A7A] leading-relaxed font-light">{c.description}</p>
               <p className="mt-5 sm:mt-6 text-xs text-[#C4A882] italic font-light">{c.note}</p>

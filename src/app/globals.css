@@ -26,7 +26,7 @@
   --foreground: #1A2B2B;
 
   /* Brand teal (from logo) */
-  --primary: #1B5C6E;
+  --primary: #2A5240;
   --primary-foreground: #FAFAF8;
 
   /* Soft off-white surface */
@@ -83,7 +83,7 @@
   content: '';
   position: absolute;
   inset: 0;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cpath d='M20 100 Q60 20 100 60 Q60 80 20 100Z' fill='%231B5C6E' opacity='0.04'/%3E%3Cpath d='M0 80 Q40 10 80 50 Q40 70 0 80Z' fill='%231B5C6E' opacity='0.03'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cpath d='M20 100 Q60 20 100 60 Q60 80 20 100Z' fill='%232A5240' opacity='0.04'/%3E%3Cpath d='M0 80 Q40 10 80 50 Q40 70 0 80Z' fill='%232A5240' opacity='0.03'/%3E%3C/svg%3E");
   background-size: 120px 120px;
   pointer-events: none;
   z-index: 0;

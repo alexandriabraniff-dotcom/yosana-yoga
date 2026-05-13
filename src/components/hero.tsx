@@ -20,8 +20,8 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="inline-flex items-center gap-2 mb-8"
           >
-            <span className="w-4 h-px bg-[#1B5C6E]" />
-            <span className="text-[10px] uppercase tracking-[0.28em] text-[#1B5C6E]">Parkside · Adelaide</span>
+            <span className="w-4 h-px bg-[#2A5240]" />
+            <span className="text-[10px] uppercase tracking-[0.28em] text-[#2A5240]">Parkside · Adelaide</span>
           </motion.div>
 
           {/* Headline */}
@@ -34,7 +34,7 @@ export default function Hero() {
           >
             A home for
             <br />
-            <em className="italic text-[#1B5C6E]">your practice.</em>
+            <em className="italic text-[#2A5240]">your practice.</em>
           </motion.h1>
 
           {/* Subtext */}
@@ -61,13 +61,13 @@ export default function Hero() {
           >
             <a
               href="#contact"
-              className="bg-[#1A2B2B] text-white px-6 sm:px-8 py-3.5 text-xs uppercase tracking-[0.15em] hover:bg-[#1B5C6E] transition-colors duration-300"
+              className="bg-[#1A2B2B] text-white px-6 sm:px-8 py-3.5 text-xs uppercase tracking-[0.15em] hover:bg-[#2A5240] transition-colors duration-300"
             >
               Book a Class
             </a>
             <a
               href="#about"
-              className="border border-[#C4C0BA] text-[#1A2B2B] px-6 sm:px-8 py-3.5 text-xs uppercase tracking-[0.15em] hover:border-[#1B5C6E] hover:text-[#1B5C6E] transition-colors duration-300"
+              className="border border-[#C4C0BA] text-[#1A2B2B] px-6 sm:px-8 py-3.5 text-xs uppercase tracking-[0.15em] hover:border-[#2A5240] hover:text-[#2A5240] transition-colors duration-300"
             >
               Learn More
             </a>

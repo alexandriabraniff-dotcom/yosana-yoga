@@ -35,7 +35,7 @@ export default function Nav() {
           <nav className="hidden md:flex items-center gap-8 lg:gap-10 flex-1">
             {leftLinks.map((link) => (
               <a key={link.href} href={link.href}
-                className="text-[10px] uppercase tracking-[0.2em] text-[#6B7A7A] hover:text-[#1B5C6E] transition-colors">
+                className="text-[10px] uppercase tracking-[0.2em] text-[#6B7A7A] hover:text-[#2A5240] transition-colors">
                 {link.label}
               </a>
             ))}
@@ -43,7 +43,7 @@ export default function Nav() {
 
           {/* CENTER — wordmark (desktop) */}
           <a href="#"
-            className="hidden md:block absolute left-1/2 -translate-x-1/2 tracking-[0.35em] text-sm font-light text-[#1B5C6E] uppercase">
+            className="hidden md:block absolute left-1/2 -translate-x-1/2 tracking-[0.35em] text-sm font-light text-[#2A5240] uppercase">
             YOSANA
           </a>
 
@@ -51,19 +51,19 @@ export default function Nav() {
           <nav className="hidden md:flex items-center gap-8 lg:gap-10 flex-1 justify-end">
             {rightLinks.map((link) => (
               <a key={link.href} href={link.href}
-                className="text-[10px] uppercase tracking-[0.2em] text-[#6B7A7A] hover:text-[#1B5C6E] transition-colors">
+                className="text-[10px] uppercase tracking-[0.2em] text-[#6B7A7A] hover:text-[#2A5240] transition-colors">
                 {link.label}
               </a>
             ))}
             <a href="#contact"
-              className="text-[10px] uppercase tracking-[0.2em] text-white bg-[#1B5C6E] px-4 py-2 hover:bg-[#154D5D] transition-colors">
+              className="text-[10px] uppercase tracking-[0.2em] text-white bg-[#2A5240] px-4 py-2 hover:bg-[#1E3D2F] transition-colors">
               Book
             </a>
           </nav>
 
           {/* Mobile layout */}
           <div className="md:hidden flex items-center justify-between w-full">
-            <a href="#" className="tracking-[0.3em] text-sm font-light text-[#1B5C6E] uppercase">YOSANA</a>
+            <a href="#" className="tracking-[0.3em] text-sm font-light text-[#2A5240] uppercase">YOSANA</a>
             <button onClick={() => setOpen(!open)} aria-label="Toggle menu" className="text-[#1A2B2B] p-2 -mr-2">
               {open ? <X size={18} /> : <Menu size={18} />}
             </button>
@@ -86,12 +86,12 @@ export default function Nav() {
             <nav className="flex flex-col px-6 py-2 divide-y divide-[#F0EDEA]">
               {[...leftLinks, ...rightLinks].map((link) => (
                 <a key={link.href} href={link.href} onClick={() => setOpen(false)}
-                  className="text-[10px] uppercase tracking-[0.2em] text-[#6B7A7A] hover:text-[#1B5C6E] transition-colors py-4">
+                  className="text-[10px] uppercase tracking-[0.2em] text-[#6B7A7A] hover:text-[#2A5240] transition-colors py-4">
                   {link.label}
                 </a>
               ))}
               <a href="#contact" onClick={() => setOpen(false)}
-                className="text-[10px] uppercase tracking-[0.2em] text-[#1B5C6E] font-medium py-4">
+                className="text-[10px] uppercase tracking-[0.2em] text-[#2A5240] font-medium py-4">
                 Book a Class
               </a>
             </nav>

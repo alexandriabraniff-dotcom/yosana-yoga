@@ -17,7 +17,7 @@ export default function About() {
             transition={{ duration: 0.8 }}
             className="relative"
           >
-            <div className="absolute inset-0 translate-x-3 translate-y-3 sm:translate-x-4 sm:translate-y-4 bg-[#1B5C6E]/8" />
+            <div className="absolute inset-0 translate-x-3 translate-y-3 sm:translate-x-4 sm:translate-y-4 bg-[#2A5240]/8" />
             <div className="relative h-[340px] sm:h-[420px] lg:h-[500px] overflow-hidden">
               <Image
                 src="https://images.unsplash.com/photo-1599447421416-3414500d18a5?w=900&q=85&auto=format&fit=crop"
@@ -37,14 +37,14 @@ export default function About() {
             transition={{ duration: 0.8, delay: 0.1 }}
           >
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-8 h-px bg-[#1B5C6E]" />
-              <p className="text-[10px] uppercase tracking-[0.3em] text-[#1B5C6E]">Meet Warunee</p>
+              <div className="w-8 h-px bg-[#2A5240]" />
+              <p className="text-[10px] uppercase tracking-[0.3em] text-[#2A5240]">Meet Warunee</p>
             </div>
 
             <h2 className="font-display font-light text-3xl sm:text-4xl md:text-5xl text-[#1A2B2B] leading-[1.15] mb-7">
               Welcome to{" "}
               <br className="hidden sm:block" />
-              <em className="italic text-[#1B5C6E]">Yosana Yoga Home.</em>
+              <em className="italic text-[#2A5240]">Yosana Yoga Home.</em>
             </h2>
 
             <div className="space-y-5 text-sm text-[#6B7A7A] font-light leading-[1.9]">
