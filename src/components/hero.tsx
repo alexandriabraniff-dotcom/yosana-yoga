@@ -82,7 +82,7 @@ export default function Hero() {
           className="relative hidden lg:block"
         >
           <Image
-            src="/image_3.png"
+            src="/490067908_18307666102237707_4229634514786476192_n.jpg"
             alt="Yosana Yoga Home studio in Parkside, Adelaide"
             fill
             priority
